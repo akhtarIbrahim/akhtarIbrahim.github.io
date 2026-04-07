@@ -13,7 +13,7 @@
 
     body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #e8e8e4;
+    background: #9e9e9e;
     min-height: 100vh;
     }
 
@@ -37,29 +37,6 @@
     pointer-events: none;
     }
 
-    .c-frame {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 4rem;
-    height: 4rem;
-    border: 2px solid rgba(255,255,255,0.7);
-    border-right: none;
-    border-bottom: none;
-    }
-
-    .c-frame::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(255,255,255,0.7);
-    border-left: none;
-    border-top: none;
-    }
-
     .c-overlay-text {
     position: absolute;
     top: 1rem;
@@ -75,16 +52,22 @@
     }
 
     .c-btn {
-    width: 2rem;
-    height: 2rem;
-    border: none;
+    width: 42px;   
+    height: 42px;
     border-radius: 50%;
-    background: #fff;
+    border: none;
+    background: rgba(255,255,255,0.6);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    }
+}
+
+    .c-btn img {
+    width: 16px;  
+    height: 16px;
+    object-fit: contain;
+}
 
     .c-avatar {
     width: 5rem;
@@ -194,14 +177,18 @@
       <!-- OVERLAY -->
       <div class="c-overlay">
         <div class="c-frame"></div>
-        <div class="c-overlay-text">Pause or not</div>
       </div>
 
       <!-- TOPBAR -->
-      <div class="c-topbar">
-        <button class="c-btn">+</button>
-        <button class="c-btn">⤴</button>
-      </div>
+        <div class="c-topbar">
+        <button class="c-btn">
+        <img src="assets/img/Linktree/Linktree1.png" alt="">
+        </button>
+
+        <button class="c-btn">
+        <img src="assets/img/Linktree/Linktree2.png" alt="">
+        </button>
+</div>
 
       <!-- PROFILE -->
       <div class="c-avatar">
@@ -212,27 +199,27 @@
       <!-- Link Ref -->
       <div class="c-links">
         <a href="#" class="c-link">
-          <img src="assets/img/Linktree/LOGO PLN.png">
+          <img src="https://plnindonesiapowerrenewables.co.id/wp-content/uploads/2023/08/Picture1.png">
           <div class="c-link-body">Website IPRen</div>
-          <span class="c-dots">⋮</span>
+          <span class="c-dots"></span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png">
           <div class="c-link-body">LinkedIn IPRen</div>
-          <span class="c-dots">⋮</span>
+          <span class="c-dots"></span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
           <div class="c-link-body">Youtube IPRen</div>
-          <span class="c-dots">⋮</span>
+          <span class="c-dots"></span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
           <div class="c-link-body">Instagram IPRen</div>
-          <span class="c-dots">⋮</span>
+          <span class="c-dots"></span>
         </a>
       </div>
 
