@@ -6,6 +6,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PT PLN Indonesia Renewables</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- SCRIPT -->
+  <script>
+  function showme () {
+    Swal.fire({
+      title: "Halo!",
+      text: "Selamat Siang!",
+      icon: "success"
+    });
+    
+    console.log("Ini baris 14, Sudah sampai disini");
+    a = 18+10;
+    console.log( "Hasil Penjumlahan : " + a);
+    a = 1 * 2 * 3;
+    console.log( "Hasil Perkalian : " * c);
+    }
+
+  function changeText(){
+    const element = document.getElementById("Intro");
+    element.innerHTML = "WEB PLNNNN";
+    }
+
+  function changeStyle (){
+    const element = document.getElementById("tombol");
+    element.style.color = "red";
+    element.style.background = "yellow";
+  }
+  </script>
 
   <!-- CSS -->
   <style>
@@ -195,28 +224,35 @@
 
       <!-- LINK REF -->
       <div class="c-links">
-        <a href="#" class="c-link">
+
+        <button class="btn btn-primary" onclick="showme()";>Show Me</button>
+        <button class="btn btn-primary" onclick="changeText()";>Change Text</button>
+        <button class="btn btn-primary" onclick="changeStyle()";>Change Style</button>
+
+
+        <a id ="tombol" href="#" class="c-link">
           <img src="https://plnindonesiapowerrenewables.co.id/wp-content/uploads/2023/08/Picture1.png">
-          <div class="c-link-body">Website IPRen</div>
-          <span class="c-dots"></span>
+          <div id="Intro" class="c-link-body">Website IPRen</div>
+          <span class="c-dots" onclick="showme();">:
+          </span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png">
           <div class="c-link-body">LinkedIn IPRen</div>
-          <span class="c-dots"></span>
+          <span class="c-dots" onclick="showme();">:</span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
           <div class="c-link-body">Youtube IPRen</div>
-          <span class="c-dots"></span>
+          <span class="c-dots"  onclick="showme();">:</span>
         </a>
 
         <a href="#" class="c-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
           <div class="c-link-body">Instagram IPRen</div>
-          <span class="c-dots"></span>
+          <span class="c-dots"  onclick="showme();">:</span>
         </a>
       </div>
 
