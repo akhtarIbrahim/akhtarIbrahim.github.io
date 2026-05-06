@@ -18,13 +18,20 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  --default-color: #1a1a2e;
+  --heading-color: #0a1628;
+  --accent-color: #2251ff;        /* biru royal McKinsey */
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  /* McKinsey tambahan */
+  --mck-navy: #0a1628;
+  --mck-navy-mid: #122040;
+  --mck-blue: #2251ff;
+  --mck-blue-light: #4d74ff;
+  --mck-gray-text: #5a6a7a;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -45,10 +52,10 @@
 }
 
 .dark-background {
-  --background-color: #020d20;
+  --background-color: #0a1628;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #4668a2;
+  --surface-color: #122040;
   --contrast-color: #ffffff;
 }
 
@@ -814,6 +821,10 @@ section,
   position: relative;
 }
 
+.section-title h2:before,
+.section-title h2::after { display: none; }
+.section-title h2 { text-transform: none; padding-bottom: 0; }
+
 .section-title h2:before {
   content: "";
   position: absolute;
@@ -961,13 +972,14 @@ section,
 }
 
 .clients .swiper-slide img {
-  transition: 0.3s;
-  padding: 0 10px;
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter 0.3s;
+}
+.clients .swiper-slide img:hover {
+  filter: grayscale(0%) opacity(1);
 }
 
-.clients .swiper-slide img:hover {
-  transform: scale(1.1);
-}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -3580,4 +3592,25 @@ section,
 .sitename {
   font-size: 1rem;
   margin-top: 8px;
+}
+
+.teks:hover{
+  scale: 105%;
+}
+
+* { will-change: auto; }
+
+.animated, .hero .animated, .swiper-slide, [data-aos] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.header { contain: layout style; }
+
+@media screen and (max-width: 768px) {
+  [data-aos-delay] { transition-delay: 0 !important; }
+}
+
+.justify {
+  text-align: justify;
 }
